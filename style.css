@@ -8,6 +8,17 @@ html {
   box-sizing: inherit;
 }
 
+nav a {
+  text-decoration: none;
+  color: #fa6980;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff2f80;
+}
+
 body {
   font-family: Helvetica, sans-serif;
   background-color: #f6f8f9;
@@ -237,6 +248,25 @@ nav img {
 .happening-small span {
   color: gray;
   font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+  transition: 0.3s;
+  margin-right: 5%;
+}
+
+a:hover {
+  color: #f1f1f1;
+}
+
+.happening-large a {
+  color: white;
+}
+
+.happening-small a {
+  color: black;
 }
 
 /* Small devices (tablets, 768px and up) */

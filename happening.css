@@ -1,0 +1,634 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fa6980;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff2f80;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #f6f8f9;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tablet {
+  display: none;
+}
+.desktop {
+  display: none;
+}
+
+nav {
+  height: 4.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: auto 2em;
+  margin-bottom: 1em;
+}
+
+nav .logo {
+  color: lightgray;
+}
+
+nav img {
+  width: 80%;
+}
+
+.main-image {
+  height: 18em;
+  background-image: url("./img/happening_4.png");
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+  padding-top: 1.3em;
+}
+
+.image-title {
+  display: flex;
+  justify-content: center;
+}
+
+.main-image h3 {
+  font-size: 180%;
+}
+
+.main-image-middle {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+
+.main-image-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em;
+  margin-top: 3em;
+  align-items: center;
+}
+
+.main-image-bottom p {
+  color: #fa6980;
+  font-size: 90%;
+}
+
+.main-image-bottom p span {
+  color: white;
+  margin-left: 1em;
+}
+
+section {
+  margin: 0 2em;
+}
+
+section h2 {
+  font-size: 200%;
+  margin: 1.2em auto;
+}
+
+section p {
+  color: gray;
+  font-size: 85%;
+  line-height: 1.6em;
+}
+
+section .divider {
+  border-bottom: 1px solid lightgray;
+  margin: 2em auto;
+}
+
+article {
+  margin-bottom: 3em;
+}
+
+article .header {
+  display: flex;
+  align-items: center;
+}
+
+article .header h3 {
+  font-size: 150%;
+  margin: 0;
+  margin-left: 1em;
+}
+
+article p {
+  font-size: 100%;
+  color: black;
+}
+
+article span {
+  color: gray;
+  font-size: 80%;
+}
+
+.article-image {
+  width: 100%;
+  border-radius: 5%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 550px) {
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: contents;
+  }
+
+  nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+    padding-left: 1em;
+  }
+
+  .nav-item {
+    font-size: 60%;
+    color: rgba(52, 54, 56, 0.5);
+    margin: auto 1em;
+  }
+
+  .nav-item img {
+    width: 80%;
+  }
+
+  .nav-item-selected {
+    color: rgba(52, 54, 56, 1);
+  }
+
+  .primary {
+    color: #fa6980;
+    font-weight: bold;
+  }
+
+  .menu-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-image {
+    padding-top: 6.8em;
+    height: 25em;
+    background-image: url("./img/happening_4.png");
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+  }
+
+  .image-title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-image h3 {
+    margin: 0 auto;
+    font-size: 180%;
+  }
+
+  .main-image-middle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-image-middle p {
+    margin-right: 2em;
+  }
+
+  .main-image-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2em;
+    margin-top: 6.5em;
+    align-items: flex-end;
+  }
+
+  .main-image-bottom-left {
+    height: 2em;
+    display: flex;
+    align-items: center;
+  }
+
+  .main-image-bottom img {
+    margin-right: 1em;
+    height: 100%;
+  }
+
+  .main-image-bottom-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px dotted white;
+    width: 35%;
+    padding: 1em;
+  }
+
+  .main-image-bottom-right h6 {
+    color: #fa6980;
+    font-size: 80%;
+    margin: 0 auto;
+  }
+
+  .main-image-bottom p {
+    font-size: 80%;
+    margin-top: 0.5em;
+    color: white;
+    margin-bottom: 0;
+  }
+
+  section {
+    margin: 0 5em;
+    margin-bottom: 4em;
+  }
+
+  section .main {
+    margin-top: 4em;
+    column-count: 2;
+    column-gap: 2.5em;
+  }
+
+  section .main p {
+    color: gray;
+  }
+
+  section h2 {
+    font-size: 180%;
+    margin: 0 auto;
+  }
+
+  section p {
+    color: gray;
+    font-size: 85%;
+    line-height: 1.6em;
+  }
+
+  section .dotted-divider {
+    border-bottom: 2px dotted lightgray;
+    margin: 2em auto;
+  }
+
+  section h5 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  section .divider {
+    border-bottom: 1px solid lightgray;
+    margin: 3em auto;
+  }
+
+  article {
+    margin-bottom: 3em;
+  }
+
+  article .header {
+    display: flex;
+    align-items: center;
+  }
+
+  article .header img {
+    height: 2em;
+  }
+
+  article .header h3 {
+    font-size: 120%;
+    margin: 0;
+    margin-left: 1em;
+  }
+
+  article p {
+    font-size: 100%;
+    color: black;
+  }
+
+  .article-image {
+    width: 100%;
+    border-radius: 2%;
+    height: 19em;
+  }
+
+  article span {
+    color: gray;
+    font-size: 80%;
+  }
+
+  footer {
+    padding: 10%;
+    background-color: gray;
+    display: grid;
+    grid-gap: 3em 4%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-weight: bold;
+    color: white;
+    font-size: 80%;
+  }
+
+  .footer-menu {
+    color: lightgray;
+    font-size: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+  }
+
+  .footer-menu-column {
+    display: grid;
+    gap: 0.5em;
+  }
+
+  .footer-email input {
+    background-color: transparent;
+    color: lightgray;
+    padding: 0.5em;
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  .footer-email input::placeholder {
+    color: lightgray;
+  }
+
+  .footer-email p {
+    font-size: 75%;
+    color: lightgray;
+  }
+
+  .footer-sns {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .fab {
+    color: white;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: lightgray;
+    transition: 0.3s;
+    margin-right: 5%;
+  }
+
+  footer a:hover {
+    color: #f1f1f1;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 850px) {
+  .mobile,
+  .tablet {
+    display: none;
+  }
+
+  .desktop {
+    display: contents;
+  }
+  /* 600 224 */
+  .main-image {
+    padding-top: 14em;
+    height: 37.5em;
+    background-image: url("./img/happening_4.png");
+    background-size: 100% 100%;
+    color: white;
+    font-weight: bold;
+  }
+
+  .image-title {
+    display: flex;
+    justify-content: center;
+    font-size: 130%;
+  }
+
+  .main-image h3 {
+    margin: 0 auto;
+    font-size: 180%;
+  }
+
+  .main-image-middle {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-image-middle p {
+    margin-right: 2em;
+  }
+
+  .main-image-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2em;
+    margin-top: 5.5em;
+    align-items: flex-end;
+  }
+
+  .main-image-bottom-left {
+    height: 2em;
+    display: flex;
+    align-items: center;
+  }
+
+  .main-image-bottom img {
+    margin-right: 1em;
+    height: 100%;
+  }
+
+  .main-image-bottom-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px dotted white;
+    width: 27%;
+    padding: 1.5em;
+  }
+
+  .main-image-bottom-right h6 {
+    color: #fa6980;
+    font-size: 80%;
+    margin: 0 auto;
+  }
+
+  .main-image-bottom-right span {
+    font-size: 65%;
+  }
+
+  .main-image-bottom p {
+    font-size: 80%;
+    margin-top: 0.5em;
+    color: white;
+    margin-bottom: 0;
+  }
+
+  section {
+    margin: 4em 9em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  section .main {
+    column-count: 1;
+    border-right: 1px solid lightgray;
+    padding-right: 3em;
+    margin-right: 3em;
+    margin-top: 0;
+  }
+
+  section .main p {
+    color: gray;
+  }
+
+  section h2 {
+    font-size: 160%;
+    margin: 0;
+    width: 50%;
+  }
+
+  section p {
+    color: gray;
+    font-size: 85%;
+    line-height: 1.6em;
+  }
+
+  section .dotted-divider {
+    border-bottom: 2px dotted lightgray;
+    margin: 2em auto;
+  }
+
+  section h5 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  section .divider {
+    border-bottom: 1px solid lightgray;
+    margin: 3em auto;
+  }
+
+  .right-section {
+    display: grid;
+    grid-template-rows: 24% 24% 48%;
+    grid-gap: 2%;
+  }
+
+  article {
+    margin-bottom: 0;
+  }
+
+  article .header {
+    display: flex;
+    align-items: center;
+  }
+
+  article .header img {
+    height: 2em;
+  }
+
+  article .header h3 {
+    font-size: 120%;
+    margin: 0;
+    margin-left: 1em;
+  }
+
+  article p {
+    font-size: 100%;
+    color: black;
+  }
+
+  .article-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+  }
+
+  article span {
+    color: gray;
+    font-size: 80%;
+  }
+
+  footer {
+    padding: 5%;
+    background-color: gray;
+    display: grid;
+    grid-gap: 4%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer-logo {
+    font-weight: bold;
+    color: white;
+  }
+
+  .footer-menu {
+    color: lightgray;
+    font-size: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+  }
+
+  .footer-menu-column {
+    display: grid;
+    grid-gap: 1em;
+  }
+
+  .footer-email input {
+    background-color: transparent;
+    color: lightgray;
+    padding: 0.5em;
+    width: 80%;
+    font-size: 0.8em;
+  }
+
+  .footer-email input::placeholder {
+    color: lightgray;
+  }
+
+  .footer-email p {
+    font-size: 75%;
+    color: lightgray;
+  }
+
+  .footer-sns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
