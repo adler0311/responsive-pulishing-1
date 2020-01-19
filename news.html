@@ -110,42 +110,48 @@
       </div>
     </div>
     <div class="tablet desktop">
-      <nav>
-        <div class="logo"><a href="./index.html">LOGO</a></div>
-        <div class="menu-right">
-          <a href="index.html"
-            ><span
-              class="nav-item nav-item-selected"
-              id="menu-home"
+      <div class="desktop">
+        <nav>
+          <div class="logo"><a href="./index.html">LOGO</a></div>
+          <div class="menu-right">
+            <a href="index.html"
+              ><span
+                class="nav-item nav-item-selected"
+                id="menu-home"
+                onmouseover="openNavMenu()"
+                onmouseout="closeNavMenu()"
+                >HOME</span
+              ></a
+            >
+            <div
+              id="nav-menu"
+              class="overlay"
               onmouseover="openNavMenu()"
               onmouseout="closeNavMenu()"
-              >HOME</span
-            ></a
-          >
-          <div
-            id="nav-menu"
-            class="overlay"
-            onmouseover="openNavMenu()"
-            onmouseout="closeNavMenu()"
-          >
-            <div class="overlay-content">
-              <a href="happeneing.html">WORLD NEWS</a>
-              <a href="news.html">TRAVEL</a>
-              <a href="index.html"><span class="selected">TECHNOLOGY</span></a>
-              <a href="happeneing.html">CITY</a>
-              <a href="news.html">CULTURE</a>
-              <a href="index.html">MORE...</a>
+            >
+              <div class="overlay-content">
+                <a href="happeneing.html">WORLD NEWS</a>
+                <a href="news.html">TRAVEL</a>
+                <a href="index.html"
+                  ><span class="selected">TECHNOLOGY</span></a
+                >
+                <a href="happeneing.html">CITY</a>
+                <a href="news.html">CULTURE</a>
+                <a href="index.html">MORE...</a>
+              </div>
+            </div>
+
+            <a href="happeneing.html"
+              ><span class="nav-item">DISCOVERY</span></a
+            >
+            <a href="news.html"><span class="nav-item">PHOTOS</span></a>
+            <a href="#"><span class="nav-item">CONTACT</span></a>
+            <div class="nav-item">
+              <a href="#"><img src="./img/profile.png"/></a>
             </div>
           </div>
-
-          <a href="happeneing.html"><span class="nav-item">DISCOVERY</span></a>
-          <a href="news.html"><span class="nav-item">PHOTOS</span></a>
-          <a href="#"><span class="nav-item">CONTACT</span></a>
-          <div class="nav-item">
-            <a href="#"><img src="./img/profile.png"/></a>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <div class="body">
         <div class="menu">
           <div class="left">
@@ -252,41 +258,42 @@
           </div>
         </section>
       </div>
-      <footer>
-        <div class="footer-logo">
-          LOGO
-        </div>
-        <div class="footer-menu">
-          <div class="footer-menu-column">
-            <a href="#">Home</a>
-            <a href="#">Discovery</a>
-            <a href="#">Photos</a>
-            <a href="#">Contact</a>
-          </div>
-          <div class="footer-menu-column">
-            <a href="#">About</a>
-            <a href="#">Help</a>
-            <a href="#">Terms</a>
-            <a href="#">Guidlines</a>
-          </div>
-          <div class="footer-menu-column">
-            <a href="#">Testimonials</a>
-            <a href="#">Advertise</a>
-            <a href="#">Integrations</a>
-            <a href="#">Careers</a>
-          </div>
-        </div>
-        <div class="footer-email">
-          <input type="text" placeholder="Email" />
-          <p>Stay in touch with us for the freshest product?</p>
-        </div>
-        <div class="footer-sns">
-          <a><i class="fab fa-instagram"></i></a>
-          <a><i class="fab fa-facebook-f"></i></a>
-          <a><i class="fab fa-twitter"></i></a>
-        </div>
-      </footer>
     </div>
+
+    <footer>
+      <div class="footer-logo">
+        LOGO
+      </div>
+      <div class="footer-menu">
+        <div class="footer-menu-column">
+          <a href="#">Home</a>
+          <a href="#">Discovery</a>
+          <a href="#">Photos</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-menu-column">
+          <a href="#">About</a>
+          <a href="#">Help</a>
+          <a href="#">Terms</a>
+          <a href="#">Guidlines</a>
+        </div>
+        <div class="footer-menu-column">
+          <a href="#">Testimonials</a>
+          <a href="#">Advertise</a>
+          <a href="#">Integrations</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="footer-email">
+        <input type="text" placeholder="Email" />
+        <p>Stay in touch with us for the freshest product?</p>
+      </div>
+      <div class="footer-sns">
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
     <script>
       function openNav() {
         document.getElementById("side-nav").style.width = "100%";
