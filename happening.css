@@ -242,6 +242,7 @@ article span {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) {
+  .desktop,
   .mobile {
     display: none;
   }
