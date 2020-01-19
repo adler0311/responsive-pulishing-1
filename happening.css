@@ -50,6 +50,104 @@ nav img {
   width: 80%;
 }
 
+.side-nav {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.side-nav .display {
+  padding-top: 2.5em;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 60% 40%;
+}
+
+.display .footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4em;
+}
+
+.display .footer-menu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu-column a {
+  color: white;
+  margin-bottom: 1em;
+}
+
+.display .footer-sns {
+  margin-top: 4em;
+  margin-left: 2.5em;
+}
+
+.display .footer-sns a {
+  color: white;
+  margin-right: 1.5em;
+}
+
+.display .menu {
+  margin-left: 2.5em;
+}
+
+.side-nav .logo {
+  margin-bottom: 5.5em;
+}
+
+.side-nav .logo a {
+  color: #fa6980;
+  font-weight: bold;
+}
+
+.side-nav a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #f1f1f1;
+}
+
+.side-nav .nav-item {
+  color: lightgray;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5em;
+}
+
+.display .nav-item-selected,
+.nav-item-selected a {
+  color: black;
+  font-weight: bold;
+}
+
+.side-nav .nav-item i,
+.side-nav .nav-item img {
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+.side-nav .footer {
+  background-color: gray;
+}
+
+.side-nav .transparent {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .main-image {
   height: 18em;
   background-image: url("./img/happening_4.png");
@@ -157,7 +255,7 @@ article span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3em;
+    height: 50px;
     padding-left: 1em;
   }
 
@@ -415,7 +513,43 @@ article span {
   .desktop {
     display: contents;
   }
-  /* 600 224 */
+
+  .overlay {
+    height: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 1;
+    background-color: #f6f8f9;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    padding-top: 1.5em;
+    position: relative;
+    width: 100%;
+    padding-left: 1.5em;
+  }
+
+  .overlay a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    transition: 0.3s;
+    padding-bottom: 1.5em;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: gray;
+  }
+
+  .overlay a .selected {
+    color: black;
+  }
+
   .main-image {
     padding-top: 14em;
     height: 37.5em;

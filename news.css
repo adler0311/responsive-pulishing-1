@@ -552,6 +552,42 @@ section .accent {
     justify-content: space-between;
   }
 
+  .overlay {
+    height: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 1;
+    background-color: #f6f8f9;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  .overlay-content {
+    padding-top: 1.5em;
+    position: relative;
+    width: 100%;
+    padding-left: 1.5em;
+  }
+
+  .overlay a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: lightgray;
+    display: block;
+    transition: 0.3s;
+    padding-bottom: 1.5em;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: gray;
+  }
+
+  .overlay a .selected {
+    color: black;
+  }
+
   .body {
     margin-top: 2.5em;
     padding-left: 9em;
@@ -704,9 +740,6 @@ section .accent {
     grid-gap: 4%;
     grid-template-columns: 32% 64%;
     padding-top: 2em;
-  }
-
-  .article-1 header {
   }
 
   .article-1 .p {

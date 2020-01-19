@@ -25,6 +25,7 @@
         <div><i class="fas fa-arrow-left"></i></div>
         <div><i class="fas fa-sliders-h"></i></div>
       </nav>
+
       <div class="body">
         <div class="main-image">
           <div class="image-title">
@@ -113,8 +114,30 @@
         <div class="logo"><a href="./index.html">LOGO</a></div>
         <div class="menu-right">
           <a href="index.html"
-            ><span class="nav-item nav-item-selected">HOME</span></a
+            ><span
+              class="nav-item nav-item-selected"
+              id="menu-home"
+              onmouseover="openNavMenu()"
+              onmouseout="closeNavMenu()"
+              >HOME</span
+            ></a
           >
+          <div
+            id="nav-menu"
+            class="overlay"
+            onmouseover="openNavMenu()"
+            onmouseout="closeNavMenu()"
+          >
+            <div class="overlay-content">
+              <a href="happeneing.html">WORLD NEWS</a>
+              <a href="news.html">TRAVEL</a>
+              <a href="index.html"><span class="selected">TECHNOLOGY</span></a>
+              <a href="happeneing.html">CITY</a>
+              <a href="news.html">CULTURE</a>
+              <a href="index.html">MORE...</a>
+            </div>
+          </div>
+
           <a href="happeneing.html"><span class="nav-item">DISCOVERY</span></a>
           <a href="news.html"><span class="nav-item">PHOTOS</span></a>
           <a href="#"><span class="nav-item">CONTACT</span></a>
@@ -264,5 +287,29 @@
         </div>
       </footer>
     </div>
+    <script>
+      function openNav() {
+        document.getElementById("side-nav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("side-nav").style.width = "0px";
+      }
+
+      function openNavMenu() {
+        const home = document.getElementById("menu-home");
+        const left = home.getBoundingClientRect().left;
+        const navStyle = document.getElementById("nav-menu").style;
+        navStyle.left = `${left}px`;
+        navStyle.top = "50px";
+        navStyle.height = "15em";
+        navStyle.width = "13em";
+      }
+
+      function closeNavMenu() {
+        const navStyle = document.getElementById("nav-menu").style;
+        navStyle.height = "0";
+      }
+    </script>
   </body>
 </html>

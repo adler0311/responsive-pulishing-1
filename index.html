@@ -12,7 +12,7 @@
       src="https://kit.fontawesome.com/9e889059c2.js"
       crossorigin="anonymous"
     ></script>
-    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <link href="./index.css" rel="stylesheet" type="text/css" />
     <script>
       // Picture element HTML5 shiv
       document.createElement("picture");
@@ -21,17 +21,88 @@
   </head>
   <body>
     <nav class="mobile">
-      <div><i class="fas fa-bars"></i></div>
-      <div class="logo"><a href="./index.html">LOGO</a></div>
+      <div onclick="openNav()"><i class="fas fa-bars"></i></div>
+      <a href="./index.html"><div class="logo">LOGO</div></a>
       <div><img src="./img/profile.png" /></div>
     </nav>
+    <div id="side-nav" class="side-nav">
+      <div class="display">
+        <div class="menu">
+          <div class="logo"><a href="./index.html">LOGO</a></div>
+          <div class="nav-item nav-item-selected">
+            <i class="fas fa-home"></i>
+            <a href="index.html">HOME</a>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-compass"></i>
+            <a href="happeneing.html">DISCOVERY</a>
+          </div>
+          <div class="nav-item">
+            <i class="far fa-image"></i>
+            <a href="news.html">PHOTOS</a>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <a href="#">CONTACT</a>
+          </div>
+          <div class="nav-item">
+            <img src="./img/profile.png" />
+            <a href="#">PROFILE</a>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="footer-links">
+            <div class="footer-menu-column">
+              <a href="#">About</a>
+              <a href="#">Help</a>
+              <a href="#">Terms</a>
+              <a href="#">Guidlines</a>
+            </div>
+            <div class="footer-menu-column">
+              <a href="#">Testimonials</a>
+              <a href="#">Advertise</a>
+              <a href="#">Integrations</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+          <div class="footer-sns">
+            <a><i class="fab fa-instagram"></i></a>
+            <a><i class="fab fa-twitter"></i></a>
+            <a><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="transparent" onclick="closeNav()"></div>
+    </div>
     <div class="tablet desktop">
       <nav>
         <div class="logo"><a href="./index.html">LOGO</a></div>
         <div class="menu-right">
           <a href="index.html"
-            ><span class="nav-item nav-item-selected">HOME</span></a
+            ><span
+              class="nav-item nav-item-selected"
+              id="menu-home"
+              onmouseover="openNavMenu()"
+              onmouseout="closeNavMenu()"
+              >HOME</span
+            ></a
           >
+          <div
+            id="nav-menu"
+            class="overlay"
+            onmouseover="openNavMenu()"
+            onmouseout="closeNavMenu()"
+          >
+            <div class="overlay-content">
+              <a href="happeneing.html">WORLD NEWS</a>
+              <a href="news.html">TRAVEL</a>
+              <a href="index.html"><span class="selected">TECHNOLOGY</span></a>
+              <a href="happeneing.html">CITY</a>
+              <a href="news.html">CULTURE</a>
+              <a href="index.html">MORE...</a>
+            </div>
+          </div>
+
           <a href="happeneing.html"><span class="nav-item">DISCOVERY</span></a>
           <a href="news.html"><span class="nav-item">PHOTOS</span></a>
           <a href="#"><span class="nav-item">CONTACT</span></a>
@@ -218,5 +289,29 @@
         </div>
       </footer>
     </div>
+    <script>
+      function openNav() {
+        document.getElementById("side-nav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("side-nav").style.width = "0px";
+      }
+
+      function openNavMenu() {
+        const home = document.getElementById("menu-home");
+        const left = home.getBoundingClientRect().left;
+        const navStyle = document.getElementById("nav-menu").style;
+        navStyle.left = `${left}px`;
+        navStyle.top = "50px";
+        navStyle.height = "15em";
+        navStyle.width = "13em";
+      }
+
+      function closeNavMenu() {
+        const navStyle = document.getElementById("nav-menu").style;
+        navStyle.height = "0";
+      }
+    </script>
   </body>
 </html>
