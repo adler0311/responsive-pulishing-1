@@ -254,7 +254,6 @@ a {
   text-decoration: none;
   color: lightgray;
   transition: 0.3s;
-  margin-right: 5%;
 }
 
 a:hover {
@@ -289,7 +288,7 @@ a:hover {
   }
 
   .nav-item {
-    font-size: 60%;
+    font-size: 75%;
     color: rgba(52, 54, 56, 0.5);
     margin: auto 1em;
   }
@@ -637,7 +636,7 @@ a:hover {
   }
 
   .nav-item {
-    font-size: 80%;
+    font-size: 75%;
     color: rgba(52, 54, 56, 0.5);
     margin: auto 1em;
   }
