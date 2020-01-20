@@ -653,6 +653,7 @@ section .accent {
 
   .image-title {
     padding-top: 9.5em;
+    text-align: center;
   }
 
   .main-image h3 {
