@@ -389,6 +389,10 @@ section .accent {
     border-bottom: 1px solid lightgray;
   }
 
+  .article-1 .header {
+    margin-top: 2em;
+  }
+
   .article-1 .p {
     column-count: 2;
     column-gap: 2em;
